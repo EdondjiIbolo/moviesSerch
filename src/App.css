@@ -1,0 +1,9 @@
+main{
+    width: 100%;
+    display:grid;
+    padding: 20px;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap:30px;
+    align-items: start;
+}

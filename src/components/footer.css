@@ -1,0 +1,24 @@
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    border-top: none;
+    margin-top: 25px;
+}
+footer a{
+    display: block;
+    width: 70px;
+    padding: 10px;
+    border-radius: 20px;
+    color: aliceblue;
+    background-color: cadetblue;
+    transition: all 300ms ease;
+    text-decoration: none;
+    text-align: center;
+}
+a:hover{
+    background-color: darkcyan;
+    text-decoration: none;
+    transform: scale(1.03);
+}
