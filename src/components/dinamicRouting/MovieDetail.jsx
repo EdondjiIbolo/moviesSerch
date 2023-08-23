@@ -1,13 +1,11 @@
 import { useParams , Link } from 'react-router-dom'
-import React from 'react'
 import './details.css'
 import { useEffect, useState } from 'react'
 
  
  function MovieDetail (){
     const {id} = useParams()
-    
-    const apikey = 'fbd037a93d5372afc504eab573259665'
+
     // https://api.themoviedb.org/3/movie/976573?&append_to_response=videos&api_key=fbd037a93d5372afc504eab573259665
     const useMovieDetail = ({id})=>{
         const [movie , setMovie] = useState({})

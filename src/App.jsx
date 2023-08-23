@@ -8,6 +8,7 @@ import { useState } from 'react'
 
 
 
+
 function App() {
  const [ enableFooter , setEnableFooter] = useState(true)
  const {setPagina , pagina , movies , setMovies} = useMovies()

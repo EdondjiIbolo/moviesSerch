@@ -1,6 +1,26 @@
 *{
     box-sizing: border-box;
 }
+button{
+   background-color: #161f27;
+   color: #fff;
+}
+button:hover{
+    background-color: #9b9b9b;;
+}
+input{
+    color: #fff;
+    background-color: #161f27;
+}
+input:placeholder-shown{
+    color: #1d1d1d;
+}
+body{
+    background-color: #202b38;
+}
+h1{
+    color: #fff;
+}
 .main-container{
     display: flex;
     padding: 20px;
@@ -71,15 +91,15 @@ i{
     cursor: pointer;
 }
 .detail picture img:hover::before{
-    content: 'hola';
+    content: 'VER';
     display: block;
    position: absolute;
    width: 100%;
    height: 100%;
-   top: 0px;
+   top: 0;
    left: 0;
-   /* background-color: hsl(0,0% , 0% , .05); */
-   background-color: hsl(0,0% , 0%);
+    z-index: 10;
+   background-color: hsl(0,0% , 0% , .2);
 
 }
 .detail article{
@@ -87,6 +107,7 @@ i{
     flex-direction: column;
     gap:20px;
     width: 100%;
+    color: #fff;
     
 }
 .detail article section {
