@@ -1,4 +1,4 @@
-main{
+.movies{
     width: 100%;
     display:grid;
     padding: 20px;
@@ -6,4 +6,12 @@ main{
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     gap:30px;
     align-items: start;
+    list-style: none;
+}
+.main-app{
+    display: flex;
+    flex-direction: column;
+}
+.movies a{
+    text-decoration: none;
 }

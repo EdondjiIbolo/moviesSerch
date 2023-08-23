@@ -1,13 +1,15 @@
 import { useMovies } from './components/hooks/useMovies'
 import { Header } from './components/Header'
+import { NomovieResult } from './components/NomovieResult'
 import './App.css'
 import { Footer } from './components/Footer'
 import { Movies } from './components/Movies'
+import { useState } from 'react'
 
 
 
 function App() {
- 
+ const [ enableFooter , setEnableFooter] = useState(true)
  const {setPagina , pagina , movies , setMovies} = useMovies()
  const mappedMovies = movies.map(
   movie =>({
@@ -19,21 +21,22 @@ function App() {
   })
 )
   return (
-    <>
-      <Header setMovies={setMovies} />
+    <main className='main-app'>
+      <Header setMovies={setMovies} movies={movies}  setEnableFooter={setEnableFooter}/>
       {
-        mappedMovies.length>0 ?
+        mappedMovies &&
         <section>
           <Movies mappedMovies={mappedMovies} />
-          <Footer changePage={setPagina} pagina={pagina} />
-        </section>
-        :
-        <section style={{textAlign:'center'}}>
-          <h3>No se han podido encontrar peliculas con este nombre</h3>
+          {
+            mappedMovies ?  '' :<NomovieResult/> 
+          }   
         </section>
       }
+      {
+        enableFooter == true &&  <Footer changePage={setPagina} pagina={pagina} />
+      }
       
-    </>
+    </main>
   )
 }
 

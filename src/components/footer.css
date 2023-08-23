@@ -17,8 +17,9 @@ footer a{
     text-decoration: none;
     text-align: center;
 }
-a:hover{
-    background-color: darkcyan;
+footer a:hover{
+    background-color: 
+    darkcyan;
     text-decoration: none;
     transform: scale(1.03);
 }

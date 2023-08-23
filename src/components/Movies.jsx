@@ -1,17 +1,22 @@
 
 import { Movie } from "./movie"
-
 export function Movies ({mappedMovies}){
   
     return (
-        <main>
-        {
-          mappedMovies.map((movie,index) => {
-            return(
-              <Movie index={index} key={movie.id}  movie={movie}/>
-            )
-          })
-        }
-      </main>
+      
+        <ul className='movies'>
+          {
+            mappedMovies.map((movie,index) => {
+              return(
+                <li key={movie.id}>
+                   <Movie index={index}   movie={movie}/>
+                </li>
+                 
+              
+              )
+            })
+          }
+        </ul>
+        
     )
 }

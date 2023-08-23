@@ -1,35 +1,16 @@
 
-import { useEffect, useState } from 'react'
+import { useSearchmovie } from './hooks/useSearchMovies'
 import './header.css'
-export function Header({setMovies}){
+export function Header({setMovies , movies ,setEnableFooter}){
 
-    const [searchMovie , setSearchMovie] = useState('')
-    const [search , setSearch] =useState(false)
+    const { setSearchMovie ,search ,setSearch , searchMovie} = useSearchmovie(movies , setMovies )
 
     const handleSubmit = (e)=>{
         e.preventDefault()
+        if(searchMovie=='') return
         setSearch(!search)
-        console.log(search)
-
+        setEnableFooter(false)
     }
-    useEffect(()=>{
-    fetch(`https://api.themoviedb.org/3/search/movie?query=${searchMovie}&api_key=fbd037a93d5372afc504eab573259665`)
-    .then(res=>{
-        if(res.ok){
-            return res.json()
-        }
-        else{
-            throw new Error('Error en la solicitud')
-        }
-    }
-    )
-    .then(data=> {
-        const newMovies = data.results 
-        setMovies(newMovies)
-    })
-    document.documentElement.scrollTop = 0;
-    },[search])
-    
     return(
         <header>
             <h1>Tu mejor buscador de peliculas</h1>

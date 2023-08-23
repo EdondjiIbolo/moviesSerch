@@ -12,3 +12,5 @@ Deployed Site :https://sensational-belekoy-2fd629.netlify.app
 apiKey : 'fbd037a93d5372afc504eab573259665'
 apiUrl : `https://api.themoviedb.org/3/movie/popular?api_key=${apikey}&language=en-US&page=${pagina}`
 
+apiId : `https://api.themoviedb.org/3/movie/832502?&append_to_response=videos&api_key=fbd037a93d5372afc504eab573259665`
+
